@@ -1,0 +1,474 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #e0e0e0;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background: white;
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    box-shadow: 0px 1px 5px #E0E0E0;
+    justify-content: space-between;
+}
+
+h1.name{
+    font-family: "Playfair Display", serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    margin: 30px 0px 20px 15px;
+}
+
+nav{
+    right: 0px;
+}
+
+nav.header ul{
+    display: flex;
+    list-style:none;
+    top:0;
+    right: 40px;
+}
+
+nav.header a{
+    color: black;
+    display: block;
+    font-size: 1.2em;
+    font-weight: 300;
+    padding: 35px 0px;
+    text-decoration: none;
+    padding-right: 48px;
+}
+
+nav a:hover{
+    color: #3A8A9C;
+}
+
+/* Sections and layout */
+section{
+    height: 100vh;
+    position: relative;
+}
+
+.homeContainer{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titleContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+    background-image: url(../img/PortadaHotel.jpg);
+    background-position: center;
+    background-size: cover;
+    font-family: "Playfair Display", serif;
+    color: white;
+    font-size: 3rem;
+}
+
+.titleContainer h1{
+    text-shadow: -2px 16px 8px rgb(0 0 0 / 51%);
+    margin: 0;
+}
+
+.descriptionContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #e0e0e0;
+    height: 50vh;
+
+}
+
+.imgContainer{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+div{
+    display: block;
+    unicode-bidi: isolate;
+}
+
+img.Malaga{
+    height: 80%;
+    border-style: none;
+}
+
+.infoContainer {
+    height: auto;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.boxTitle {
+     color: black;
+     align-items: center;
+     font-family: "Playfair Display", serif;
+     font-size: 3em;
+     font-weight: 400;
+     display: flex;
+     justify-content: center;
+ }
+
+ .boxImage {
+    display: flex;
+    justify-content: center;
+ }
+
+ .boxImage img {
+    width: 50%;
+ }
+
+ .line2{
+     background-color: black;
+     height: 2px;
+     margin-bottom: 7px;
+     margin-top: 5px;
+     width: 70%;
+ }
+ 
+ p.boxDescription{
+     font-size: 0.9em;
+     font-weight: 200;
+     margin: 10px;
+     width: 80%;
+     text-align: justify;
+ }
+
+ div.boxDescription{
+    margin: 20px;
+    width: 80%;
+    text-align: justify;
+}
+
+/* Custom sections */
+/* Habitaciones */
+.habitacionesContainer .descriptionContainer {
+    height: auto;
+}
+
+.habitacionesContainer .infoContainer {
+    width: 500px;
+}
+
+.habitacionesContainer .titleContainer {
+    flex-direction: column;
+    background-image: url(../img/Habitacion_hotel.jpg);
+}
+
+.servicesList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-content: center;
+}
+
+.services p {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+/* Contacto*/
+.ContactoContainer .titleContainer{
+    background-image: url(../img/Recepcion.jpg);
+}
+
+.infoContainer.services {
+    width: 70%;
+}
+
+/* Contacto */
+form {
+    width: 100%;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.formContainer label {
+    margin-top: 10px;
+}
+
+.formContainer .btnContainer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: left;
+}
+
+.formContainer .button {
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.formContainer .button:hover {
+    border: 2px solid black;
+    background-color: cadetblue;
+}
+
+.btn{
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.number{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2em;
+}
+
+/* Galeria */
+.galeriaContainer{
+    width: 400px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px;
+}
+
+.galeriaContainer a,.galeriaContainer img{
+    display: block;
+    width: 100%;
+}
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none; /* tiene que ser none para estar oculto */
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.visible{
+    display: flex;
+}
+
+.modal button{
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 2rem;
+}
+
+.GalleryContainer .descriptionContainer {
+    padding-top: 50px;
+}
+
+.GalleryContainer .galleryImage {
+    height: 300px;
+    margin: 30px 30px;
+}
+
+.galleryImage img {
+    max-width: 100%;
+    max-height: 100%;
+    border: 1.5px solid grey;
+
+}
+
+.modal img {
+    border: 1.5px solid white;
+    border-radius: 15px;
+    max-width: 80%;
+    max-height: 70vh;
+}
+
+/* Reserva */
+.ReservaContainer .titleContainer{
+    background-image: url(../img/Recepcion.jpg);
+}
+
+.descriptionContainer {
+    height: 50vh;
+}
+
+.infoContainer {
+    width: 50%;
+}
+
+.roomBooking {
+    margin-top: 20px;
+}
+
+.roomType {
+    margin-top: 20px;
+}
+
+.quantitySelector {
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Menu */
+.expand {
+    border: 1px solid #999;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.expand span {
+    display: block;
+    height: 2px;
+    background-color: #3A8A9C;
+    margin: 5px;
+}
+
+.expand.close {
+    appearance: none;
+    display: none;
+    position: absolute;
+    top: 33px;
+    right: 33px;
+    cursor: pointer;
+    color: #3A8A9C;
+    border: none;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/* Responsive */
+@media screen and (max-width:1200px){
+
+    .boxTitle {
+        font-size: 2rem;
+    }
+
+    .descriptionContainer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        height: auto;
+    }
+
+    img.Malaga {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .infoContainer {
+        width: 100%;
+        margin: 20px 0px;
+    }
+
+    .titleHotel {
+        font-size: 5vw;
+    }
+
+    .formContainer {
+        align-items: center;
+    }
+
+    .bookDates {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .roomType {
+        text-align: center;
+    }
+
+    .quantitySelector {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .habitacionesContainer .infoContainer {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .header{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    header {
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    nav.header {
+        display: none;
+    }
+
+    nav.header ul {
+        flex-direction: column;
+        width: 300px;
+    }
+
+    nav.header a {
+        padding: 10px 0px
+    }
+
+    .expand {
+        display: block;
+    }
+
+    header.open {
+        flex-direction: column;
+    }
+
+    header.open .expand.open {
+        display: none;
+    }
+
+    header.open nav.header {
+        display: flex;
+    }
+
+    header.open .expand.close {
+        display: block;
+    }
+}

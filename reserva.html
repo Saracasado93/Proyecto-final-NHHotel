@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilo.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <script defer src="js/funciones.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <h1 class="name">NH Hotel Málaga</h1>
+            <button type="button" class="expand open">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="header">
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./hotel.html">El Hotel</a></li>
+                    <li><a href="./habitaciones.html">Habitaciones y Servicios</a></li>
+                    <li><a href="./galeria.html">Galería</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                    <li><a href="./reserva.html">Reservar</a></li>
+                </ul>
+            </nav>
+            <button type="button" class="expand close">x</button>
+        </header>
+        <section class="HomeContainer ReservaContainer">
+            <div class = "titleContainer">
+                <h1 class="titleHotel">Reservar</h1>
+            </div>
+            <div class = "descriptionContainer">
+                <div class = "infoContainer">
+                    <div class="boxImage">
+                        <img src="./img/Habitacion_hotel.jpg" />
+                    </div>
+                </div>
+                <div class = "infoContainer extended">
+                    <h1 class = "boxTitle">Reserva</h1>
+                    <div class="line2"></div>
+                    <div class = "boxDescription">
+                        <form id="bookingForm" method="post">
+                            <div class="formContainer">
+                                <div class="bookDates">
+                                    <label>Fecha de entrada</label>
+                                    <input type="date" />
+        
+                                    <label>Fecha de salida</label>
+                                    <input type="date" />
+                                </div>
+
+                                <div class="roomBooking">
+                                    <div class="roomType">
+                                        <span>Habitacion Familiar</span>
+                                        <div id="room-a" class="quantitySelector">
+                                            <button type="button" class="btn add" data-room="a">+</button>
+                                            <span id="number-a" class="number">0</span>
+                                            <button type="button" class="btn remove" data-room="a">-</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="roomType">
+                                        <span>Habitacion doble con terraza</span>
+                                        <div id="room-b" class="quantitySelector">
+                                            <button type="button" class="btn add" data-room="b">+</button>
+                                            <span id="number-b" class="number">0</span>
+                                            <button type="button" class="btn remove" data-room="b">-</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="roomType">
+                                        <span>Habitacion triple</span>
+                                        <div id="room-c" class="quantitySelector">
+                                            <button type="button" class="btn add" data-room="c">+</button>
+                                            <span id="number-c" class="number">0</span>
+                                            <button type="button" class="btn remove"  data-room="c">-</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btnContainer">
+                                    <button type="submit" class="button">Reservar</button>
+                                </div>
+                            </div>
+                        </form>                    
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </body>
+</html>
